@@ -13,7 +13,7 @@ export const Navbar = () => {
             <li className="nav-item">SKILLs</li>
             <li className="nav-item">PROJECTs</li>
             <li className="nav-item">CERTIFICATEs</li>
-            <li className="nav-item">Contact</li>
+            <li className="nav-item" >Contact</li>
           </ul>
         </div>
       </nav>
