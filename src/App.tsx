@@ -7,23 +7,25 @@ import { About } from './sections/about'
 import { Skills } from './sections/skills'
 
 function App() {
-  
+
 
   return (
     <>
-      <div className="">
-      <Navbar />
-      <main>
-        <section id="hero"><Hero /></section>
-        <section id="about"><About /></section>
-        <section id="certificates"><Skills /></section>
-        {/* <section id="projects"><Projects /></section>
+      <div className="contain_main"></div>
+      <div className='contain'>
+        <Navbar />
+        <main>
+          <section id="hero"><Hero /></section>
+          <section id="about"><About /></section>
+          <section id="certificates"><Skills /></section>
+          {/* <section id="projects"><Projects /></section>
         <section id="certificates"><Certificates /></section>
         <section id="contact"><Contact /></section> */}
-      </main>
-      <Footer />
-    </div>
-      
+        </main>
+        <Footer />
+      </div>
+
+
     </>
   )
 }
