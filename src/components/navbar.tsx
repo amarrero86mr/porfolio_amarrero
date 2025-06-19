@@ -5,8 +5,8 @@ export const Navbar = () => {
 
     return(
         <nav className="nav" id="navbar">
-        <div className="nav-content">
           <h3>_agustin_m_marrero</h3>
+        <div className="nav-content">
           <ul className="nav-items">
             <li className="nav-item">HOME</li>
             <li className="nav-item">ABOUT_ME</li>
