@@ -5,6 +5,7 @@ import { Footer } from './components/footer'
 import { Hero } from './sections/hero'
 import { About } from './sections/about'
 import { Skills } from './sections/skills'
+import { Certificates } from './sections/certificates'
 
 function App() {
 
@@ -17,10 +18,10 @@ function App() {
         <main>
           <section id="hero"><Hero /></section>
           <section id="about"><About /></section>
-          <section id="certificates"><Skills /></section>
-          {/* <section id="projects"><Projects /></section>
+          <section id="skills"><Skills /></section>
+           {/* <section id="projects"><Projects /></section> */}
         <section id="certificates"><Certificates /></section>
-        <section id="contact"><Contact /></section> */}
+        {/* <section id="contact"><Contact /></section> */}
         </main>
         <Footer />
       </div>
