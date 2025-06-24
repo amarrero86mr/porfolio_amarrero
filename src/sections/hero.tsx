@@ -3,7 +3,7 @@ export const Hero = () => {
 
     return (
         <>
-            <section>
+            <section className="m-12">
                 <div>
                     <div>
 
