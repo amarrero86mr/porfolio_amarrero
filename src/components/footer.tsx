@@ -8,13 +8,13 @@ export const Footer = () => {
                 <h3 className="self-center">_agustin_m_marrero</h3>
             <div className="nav-content self-center">
                 <ul className="nav-items flex flex-row gap-3 items-center">
-                    <li className="nav-item"><a target="_blank" href="https://www.linkedin.com/in/agustin-m-marrero">
+                    <li className="footer_icon nav-item"><a target="_blank" href="https://www.linkedin.com/in/agustin-m-marrero">
                         <img src="src/assets/icons/linkedin_icon.svg" alt="icono de linkedin" width={'30px'} />
                     </a></li>
-                    <li className="nav-item"><a target="_blank" href="https://github.com/amarrero86mr">
+                    <li className="footer_icon nav-item"><a target="_blank" href="https://github.com/amarrero86mr">
                         <img src="src/assets/icons/github_icon.svg" alt="icono de github" width={'30px'} />
                     </a></li>
-                    <li className="nav-item"><a target="_blank" href="https://discord.com/channels/@amarrero86mr#1592">
+                    <li className="footer_icon nav-item"><a target="_blank" href="https://discord.com/channels/@amarrero86mr#1592">
                         <img src="src/assets/icons/discord_icon.svg" alt="icono de discord" width={'30px'} />
                     </a></li>
                 </ul>
