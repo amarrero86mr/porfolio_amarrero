@@ -7,15 +7,31 @@ import { About } from './sections/about'
 import { Skills } from './sections/skills'
 import { Certificates } from './sections/certificates'
 import { Projects } from './sections/projects'
+import { useState } from 'react'
 
 function App() {
 
-
+  const [buttonDarkLigth, setButtonDarkLigth ] = useState<boolean>(true)
+  const [themeStyle, setThemeStyle ] = useState<string>("themelight")
+  const [theStyle, setTheStyle ] = useState<string>("thelight")
+  const onDark = () => { 
+    const tstyle = !buttonDarkLigth
+    setButtonDarkLigth(tstyle)
+    if (tstyle) {
+      setThemeStyle('themelight')
+      setTheStyle('thelight')
+    } else {
+      setThemeStyle('themedark')
+      setTheStyle('thedark')
+    }
+    
+  }
+  
   return (
     <>
-      <div className="contain_main"></div>
-      <div className='contain'>
-        <Navbar />
+      <div className={`contain_main ` + themeStyle}></div>
+      <div className={`contain ` + theStyle}>
+        <Navbar handleTheme={onDark}/>
         <main>
           <section id="hero"><Hero /></section>
           <section id="about"><About /></section>

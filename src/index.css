@@ -6,8 +6,8 @@
   font-family: "Share Tech Mono", monospace;
   line-height: 1.5;
   
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color-scheme:inherit;
+  color: inherit;
   
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -17,7 +17,7 @@
 main{
   padding-top: 4rem;
   padding-bottom: 4rem;
-  width: 80%;
+  width: 85%;
   padding: auto;
   margin: auto;
 }
@@ -41,6 +41,3 @@ h1 {
   font-size: 3em;
   line-height: 1.1;
 }
-
-
-

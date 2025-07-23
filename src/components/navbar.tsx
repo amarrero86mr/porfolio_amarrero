@@ -1,7 +1,9 @@
 
 
 
-export const Navbar = () => {
+export const Navbar = (prop:{
+  handleTheme(): void
+}) => {
 
   return (
     <div>
@@ -11,6 +13,7 @@ export const Navbar = () => {
       <h3 className="self-center">_agustin_m_marrero</h3>
       <div className="nav-content self-center">
         <ul className="nav-items flex flex-row gap-3 items-center">
+          <li><button onClick={()=> prop.handleTheme()}>☀🌙</button></li>
           <li className="nav-item p-1 hover:text-lime-400 hover:bg-violet-950/45 border-0 rounded-md">HOME</li>
           <li className="nav-item p-1 hover:text-lime-400 hover:bg-violet-950/45 border-0 rounded-md">ABOUT_ME</li>
           <li className="nav-item p-1 hover:text-lime-400 hover:bg-violet-950/45 border-0 rounded-md">SKILLs</li>
