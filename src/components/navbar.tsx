@@ -16,7 +16,7 @@ export const Navbar = () => {
           <li className="nav-item p-1 hover:text-lime-400 hover:bg-violet-950/45 border-0 rounded-md">SKILLs</li>
           <li className="nav-item p-1 hover:text-lime-400 hover:bg-violet-950/45 border-0 rounded-md">PROJECTs</li>
           <li className="nav-item p-1 hover:text-lime-400 hover:bg-violet-950/45 border-0 rounded-md">CERTIFICATEs</li>
-          <li className="nav-item p-1 hover:text-lime-400 hover:bg-violet-950/45 border-0 rounded-md" >Contact</li>
+          <li className="nav-item p-1 hover:text-lime-400 hover:bg-violet-950/45 border-0 rounded-md" >CONTACT</li>
         </ul>
       </div>
     </nav>
