@@ -1,9 +1,10 @@
-html{
-    background-color: #2F0D68;
-    z-index: -10;
+html {
+  background-color: #2F0D68;
+  z-index: -10;
 }
-.contain_main{
-    
+
+.contain_main {
+
   position: fixed;
   top: 0;
   left: 0;
@@ -20,7 +21,7 @@ html{
   pointer-events: none;
 }
 
-.contain{
+.contain {
   z-index: 1;
 }
 
@@ -32,6 +33,7 @@ html{
   background-attachment: fixed;
   opacity: 0.7;
 }
+
 .thedark {
   color: #83CD29;
 }
@@ -44,6 +46,8 @@ html{
   background-attachment: fixed;
   opacity: 0.7;
 }
-.thelight{
+
+.thelight {
   color: #2F0D68;
 }
+
