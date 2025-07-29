@@ -9,14 +9,11 @@ export const Footer = () => {
             <div className="nav-content self-center">
                 <ul className="nav-items flex flex-row gap-3 items-center">
                     <li className="footer_icon nav-item"><a target="_blank" href="https://www.linkedin.com/in/agustin-m-marrero">
-                        <img src="src/assets/icons/linkedin_icon.svg" alt="icono de linkedin" width={'30px'} />
+                        <img src="src/assets/icons/square-linkedin.svg" alt="icono de linkedin" width={'30px'} />
                     </a></li>
                     <li className="footer_icon nav-item"><a target="_blank" href="https://github.com/amarrero86mr">
-                        <img src="src/assets/icons/github_icon.svg" alt="icono de github" width={'30px'} />
+                        <img src="src/assets/icons/square-github.svg" alt="icono de github" width={'30px'} />
                     </a></li>
-                    {/* <li className="footer_icon nav-item"><a target="_blank" href="https://discord.com/channels/@me/@amarrero86mr#1592">
-                        <img src="src/assets/icons/discord_icon.svg" alt="icono de discord" width={'30px'} />
-                    </a></li> */}
                 </ul>
             </div>
         </nav>

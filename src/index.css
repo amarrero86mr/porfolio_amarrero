@@ -33,8 +33,9 @@ a:hover {
 }
 .footer_icon:hover{
   border-radius: 50%;
+  background-color: hsla(257, 100%, 76%, 0.557);
   box-shadow:
-    0 0 10px 5px #a784ff8e;
+    0 0 7px 5px #a784ff8e;
 }
 
 h1 {

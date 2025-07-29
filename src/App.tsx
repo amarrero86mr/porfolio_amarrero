@@ -7,9 +7,12 @@ import { About } from './sections/about'
 import { Skills } from './sections/skills'
 import { Certificates } from './sections/certificates'
 import { Projects } from './sections/projects'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
+import { DarkLightContext, type TDarkLightContext } from './components/darklight.context'
 
 function App() {
+
+  useContext<TDarkLightContext>(DarkLightContext)
 
   const [buttonDarkLigth, setButtonDarkLigth ] = useState<boolean>(true)
   const [themeStyle, setThemeStyle ] = useState<string>("themelight")

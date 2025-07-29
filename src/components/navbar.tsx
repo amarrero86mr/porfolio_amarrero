@@ -1,9 +1,13 @@
+import { useContext } from "react"
+import { DarkLightContext, type TDarkLightContext } from "./darklight.context"
 
 
 
 export const Navbar = (prop:{
   handleTheme(): void
 }) => {
+
+  const { changeTheme, fnChangeTheme } = useContext<TDarkLightContext>(DarkLightContext)
 
   return (
     <div>
@@ -13,7 +17,12 @@ export const Navbar = (prop:{
       <h3 className="self-center">_agustin_m_marrero</h3>
       <div className="nav-content self-center">
         <ul className="nav-items flex flex-row gap-3 items-center">
-          <li><button onClick={()=> prop.handleTheme()}>☀🌙</button></li>
+          <li><button onClick={()=> {
+            prop.handleTheme()
+            fnChangeTheme()
+          }}>{changeTheme =='.lightTheme'
+            ? <img src="src/assets/icons/moon.svg" alt="icono de luna" width={'30px'} />
+            : <img src="src/assets/icons/sun.svg" alt="icono de sol" width={'30px'} />}</button></li>
           <li className="nav-item p-1 hover:text-lime-400 hover:bg-violet-950/45 border-0 rounded-md">HOME</li>
           <li className="nav-item p-1 hover:text-lime-400 hover:bg-violet-950/45 border-0 rounded-md">ABOUT_ME</li>
           <li className="nav-item p-1 hover:text-lime-400 hover:bg-violet-950/45 border-0 rounded-md">SKILLs</li>
