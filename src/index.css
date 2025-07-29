@@ -14,6 +14,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 main{
   padding-top: 4rem;
   padding-bottom: 4rem;
@@ -21,6 +22,69 @@ main{
   padding: auto;
   margin: auto;
 }
+
+/* html {
+  z-index: -10;
+} */
+
+.background .darkBackground{
+  background-color: #2F0D68;
+  z-index: -10;
+}
+
+.background .lightBackground{
+  background-color: #83CD29;
+  z-index: -10;
+}
+
+.contain_main {
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  opacity: 0.7;*/
+  z-index: -5;
+  pointer-events: none;
+}
+
+.contain {
+  z-index: 1;
+}
+
+.darkBackground {
+  background: url('/src/assets/imgs/night_background_image.png') center center / cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  opacity: 1;
+}
+
+.darkTheme {
+  color: #83CD29;
+  opacity: 1;
+}
+
+.lightBackground {
+  background: url('/src/assets/imgs/bright_background_image.png') center center / cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  opacity: 0.80;
+}
+
+.lightTheme {
+  color: #2F0D68;
+  opacity: 1;
+}
+
 
 a {
   

@@ -13,29 +13,29 @@ type TDarkLightProviderProps = {
   };
   
 export const DarkLightContext = createContext<TDarkLightContext>({
-    changeTheme: '.lightTheme',
+    changeTheme: 'lightTheme',
     setChangeTheme: () => console.error('setChangeTheme fn no implemented!'),
-    changeBackground: '.lightBackground',
+    changeBackground: 'lightBackground',
     setChangeBackground: () => console.error('setChangeBackground fn no implemented!'),
     fnChangeTheme: () => console.error('fnChangeTheme fn no implemented!')
 })
 
 const DarkLightProvider: React.FC<TDarkLightProviderProps> = ({ children }) => {
-    const [ changeTheme, setChangeTheme] = useState<string>('.lightTheme');
-    const [ changeBackground, setChangeBackground] = useState<string>('.lightBackground');
+    const [ changeTheme, setChangeTheme] = useState<string>('lightTheme');
+    const [ changeBackground, setChangeBackground] = useState<string>('lightBackground');
 
 
     const fnChangeTheme = () => {
-        if (changeTheme == '.lightTheme') {
-            setChangeTheme('.darkTheme')
+        if (changeTheme == 'lightTheme') {
+            setChangeTheme('darkTheme')
         } else {
-            setChangeTheme('.lightTheme')
+            setChangeTheme('lightTheme')
         }
 
-        if (changeBackground == '.lightBackground'){
-            setChangeBackground('.darkBackground')
+        if (changeBackground == 'lightBackground'){
+            setChangeBackground('darkBackground')
         } else {
-            setChangeBackground('.lightBackground')
+            setChangeBackground('lightBackground')
         }
     }
 

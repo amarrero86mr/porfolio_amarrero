@@ -1,4 +1,4 @@
-html {
+/* html {
   background-color: #2F0D68;
   z-index: -10;
 }
@@ -11,11 +11,11 @@ html {
   width: 100vw;
   height: 100vh;
 
-  /* background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  opacity: 0.7; */
+  //background-size: cover;
+  //background-position: center;
+  //background-repeat: no-repeat;
+  //background-attachment: fixed;
+  //opacity: 0.7; 
 
   z-index: -5;
   pointer-events: none;
@@ -25,7 +25,7 @@ html {
   z-index: 1;
 }
 
-.themedark {
+.darkBackground {
   background: url('/src/assets/imgs/night_background_image.png') center center / cover;
   background-size: cover;
   background-position: center;
@@ -34,11 +34,11 @@ html {
   opacity: 0.7;
 }
 
-.thedark {
+.darkTheme {
   color: #83CD29;
 }
 
-.themelight {
+.lightBackground {
   background: url('/src/assets/imgs/bright_background_image.png') center center / cover;
   background-size: cover;
   background-position: center;
@@ -47,7 +47,7 @@ html {
   opacity: 0.7;
 }
 
-.thelight {
+.lightTheme {
   color: #2F0D68;
 }
-
+ */

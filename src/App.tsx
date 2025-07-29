@@ -7,34 +7,35 @@ import { About } from './sections/about'
 import { Skills } from './sections/skills'
 import { Certificates } from './sections/certificates'
 import { Projects } from './sections/projects'
-import { useContext, useState } from 'react'
+import { useContext } from 'react'
 import { DarkLightContext, type TDarkLightContext } from './components/darklight.context'
 
 function App() {
 
-  useContext<TDarkLightContext>(DarkLightContext)
+  const {changeTheme, changeBackground} = useContext<TDarkLightContext>(DarkLightContext)
 
-  const [buttonDarkLigth, setButtonDarkLigth ] = useState<boolean>(true)
-  const [themeStyle, setThemeStyle ] = useState<string>("themelight")
-  const [theStyle, setTheStyle ] = useState<string>("thelight")
-  const onDark = () => { 
-    const tstyle = !buttonDarkLigth
-    setButtonDarkLigth(tstyle)
-    if (tstyle) {
-      setThemeStyle('themelight')
-      setTheStyle('thelight')
-    } else {
-      setThemeStyle('themedark')
-      setTheStyle('thedark')
-    }
-    
-  }
+  // const [buttonDarkLigth, setButtonDarkLigth ] = useState<boolean>(true)
+  // const [themeStyle, setThemeStyle ] = useState<string>("themelight")
+  // const [theStyle, setTheStyle ] = useState<string>("thelight")
+  // const onDark = () => { 
+  //   const tstyle = !buttonDarkLigth
+  //   setButtonDarkLigth(tstyle)
+  //   if (tstyle) {
+  //     setThemeStyle('themelight')
+  //     setTheStyle('thelight')
+  //   } else {
+  //     setThemeStyle('themedark')
+  //     setTheStyle('thedark')
+  //   }
+  // }
+
   
   return (
-    <>
-      <div className={`contain_main ` + themeStyle}></div>
-      <div className={`contain ` + theStyle}>
-        <Navbar handleTheme={onDark}/>
+    <body className={`backgound ` + changeBackground}>
+      <div className={`contain_main ` + changeBackground}></div>
+      <div className={`contain ` + changeTheme}>
+        {/* <Navbar handleTheme={onDark}/> */}
+        <Navbar />
         <main>
           <section id="hero"><Hero /></section>
           <section id="about"><About /></section>
@@ -47,7 +48,7 @@ function App() {
       </div>
 
 
-    </>
+    </body>
   )
 }
 
