@@ -5,34 +5,35 @@
 :root {
   font-family: "Share Tech Mono", monospace;
   line-height: 1.5;
-  
-  color-scheme:inherit;
+
+  color-scheme: inherit;
   color: inherit;
-  
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-main{
+main {
   padding-top: 4rem;
   padding-bottom: 4rem;
   width: 85%;
   padding: auto;
   margin: auto;
+  font-size: 1.2rem;
 }
 
 /* html {
   z-index: -10;
 } */
 
-.background .darkBackground{
+.background .darkBackground {
   background-color: #2F0D68;
   z-index: -10;
 }
 
-.background .lightBackground{
+.background .lightBackground {
   background-color: #83CD29;
   z-index: -10;
 }
@@ -58,44 +59,46 @@ main{
 }
 
 .darkBackground {
-  background: url('/src/assets/imgs/night_background_image.png') center center / cover;
+  background: url('/src/assets/imgs/night_background_image_ii.png') center center / cover;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  opacity: 1;
+
 }
 
 .darkTheme {
   color: #83CD29;
-  opacity: 1;
+
 }
 
 .lightBackground {
-  background: url('/src/assets/imgs/bright_background_image.png') center center / cover;
+  background: url('/src/assets/imgs/bright_background_image_ii.png') center center / cover;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  opacity: 0.80;
+
 }
 
 .lightTheme {
   color: #2F0D68;
-  opacity: 1;
+
 }
 
 
 a {
-  
+
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
-  
+
 }
-.footer_icon:hover{
+
+.footer_icon:hover {
   border-radius: 50%;
   background-color: hsla(257, 100%, 76%, 0.557);
   box-shadow:
@@ -103,6 +106,6 @@ a:hover {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 2.5em;
   line-height: 1.1;
 }

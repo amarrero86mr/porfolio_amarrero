@@ -14,7 +14,6 @@ export const Navbar = (
   const fnThem = () => {
     fnChangeTheme();
     setChange(!change)
-    console.log(change, changeTheme)
   }
 
   return (
