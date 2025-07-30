@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 .avatar{
   width: 16rem;
   height: auto;
@@ -6,9 +8,48 @@
 }
 
 .avatar .lightTheme {
-  border: 3px solid #2F0D68;
+  border: 3px solid #2f0d68;
 }
 
 .avatar .darkTheme {
   border: 3px solid  #83CD29;
 }
+
+.nav-item:hover{
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-item.darkTheme:hover{
+  text-shadow:
+  0 0 1.5em #dab2ff,
+  0 0 0.5em #A684FF;
+  color: #83CD29;
+}
+
+.nav-item.lightTheme:hover{
+  text-shadow:
+  0 0 2.5em #f0fdd8,
+  0 0 0.5em #D8F999;
+  color: #7008E7;
+}
+
+.nav-icon:hover{
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.nav-icon.darkTheme:hover{
+  background-color: 
+  hsla(257, 100%, 76%, 0.557);
+  box-shadow:
+  0 0 7px 5px #a784ff8e;
+}
+
+.nav-icon.lightTheme:hover{
+  background-color: 
+  #d7f999ab;
+  box-shadow:
+  0 0 7px 4px #e3f7bfb3;
+}
+
