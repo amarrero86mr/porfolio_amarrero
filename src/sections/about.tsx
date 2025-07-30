@@ -1,22 +1,3 @@
-//         <>
-//             <div>
-//                 <button type="button" onClick={() => { fnOnOffAbaut() }}>_about_me</button>
-//             </div>
-//             <div>
-//                 <p id="parrafo1" className="visible">
-//                     "Soy Agustín Marrero, estudiante de Ingeniería Informática en la Universidad Nacional de Avellaneda. Me apasiona la programación y me defino como una persona perseverante, autodidacta y empática.
-//                     <br /></p>
-//                 <p id="parrafo2" className="novisible">
-//                     Actualmente participo en proyectos personales con Node.js, React y MySQL. Disfruto tanto del diseño visual como de la lógica detrás del código, y veo al desarrollo como un desafío creativo que combina disciplina, aprendizaje y resolución de problemas.
-//                     <br /></p>
-//                 <p id="parrafo3" className="novisible">
-//                     Busco seguir creciendo como desarrollador full stack y formar parte de proyectos donde pueda seguir aprendiendo y aportando valor."
-//                 </p>
-//             </div>
-//         </>
-//     )
-// }
-
 import { useEffect, useState, useRef } from 'react';
 
 export const About = () => {
