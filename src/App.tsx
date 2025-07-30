@@ -31,7 +31,7 @@ function App() {
 
   
   return (
-    <body className={`backgound ` + changeBackground}>
+    <div className={`backgound ` + changeBackground}>
       <div className={`contain_main ` + changeBackground}></div>
       <div className={`contain ` + changeTheme}>
         {/* <Navbar handleTheme={onDark}/> */}
@@ -48,7 +48,7 @@ function App() {
       </div>
 
 
-    </body>
+    </div>
   )
 }
 
