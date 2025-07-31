@@ -1,6 +1,9 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef, useContext } from 'react';
+import { DarkLightContext, type TDarkLightContext,  } from '../components/darklight.context';
 
 export const About = () => {
+  const {changeTheme} = useContext<TDarkLightContext>(DarkLightContext)
+  
   const paragraphs = [
     "Soy Agustín Marrero, estudiante de Ingeniería Informática en la Universidad Nacional de Avellaneda. Me apasiona la programación y me defino como una persona perseverante, autodidacta y empática.",
     "Actualmente participo en proyectos personales con Node.js, React y MySQL. Disfruto tanto del diseño visual como de la lógica detrás del código, y veo al desarrollo como un desafío creativo que combina disciplina, aprendizaje y resolución de problemas.",
@@ -10,6 +13,10 @@ export const About = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const intervalRef = useRef<number | null>(null);
+
+  const [urlPlay, setUrlPlay ] = useState<string>('')
+
+
 
   // Avanzar índice
   const next = () => {
@@ -22,12 +29,24 @@ export const About = () => {
       intervalRef.current = window.setInterval(() => {
         next();
       }, 10000);
+
+      if (changeTheme === 'lightTheme') {
+        setUrlPlay('src/assets/icons/pause_dark.svg')
+      } else {
+        setUrlPlay('src/assets/icons/pause_light.svg')
+      }
+    } else {
+      if (changeTheme === 'lightTheme') {
+        setUrlPlay('src/assets/icons/play_dark.svg')
+      } else {
+        setUrlPlay('src/assets/icons/play_light.svg')
+      }
     }
 
     return () => {
       if (intervalRef.current) clearInterval(intervalRef.current);
     };
-  }, [isPaused]);
+  }, [isPaused, changeTheme]);
 
   return (
     <section className="mb-12">
@@ -36,7 +55,7 @@ export const About = () => {
         onClick={() => setIsPaused((prev) => !prev)}
       >
         <h2>_about_me </h2>
-        {isPaused ? <img width={30}  src="src/assets/icons/pause.svg" alt="icono de pausa" /> : <img width={30}  src="src/assets/icons/play.svg" alt="icono de play" />}
+        <img width={30}  src={urlPlay} alt="icono de play" />
       </div>
 
        <div className="space-y-4 w-11/12 pl-8 transition-all duration-300">
