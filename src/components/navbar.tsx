@@ -15,7 +15,7 @@ export const Navbar = () => {
       <div className="z-10 fixed top-0 p-3 h-16 w-full backdrop-blur-md " ></div>
       <nav className="z-20 fixed top-0 p-3 h-16 w-full flex flex-row justify-between border-b-2 bg-transparent"
         id="navbar"
-        style={changeTheme == 'lightTheme' ? { background: '#83CD2980' } : { background: '#2e0d6880' }}
+        style={changeTheme == 'lightTheme' ? { background: '#83cd2950' } : { background: '#2e0d6850' }}
       >
         <h3 className={`self-center nav-item ` + changeTheme}>_agustin_m_marrero</h3>
         <div className="nav-content self-center">

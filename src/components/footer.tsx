@@ -7,7 +7,10 @@ export const Footer = () => {
     return (
         <div>
             <div className="z-10 fixed bottom-0 p-3 h-16 w-full backdrop-blur-md" ></div>
-            <nav className="nav z-20 fixed bottom-0 p-3 h-16 w-full flex flex-row justify-between text-lime-200 bg-violet-950/35 border-t-2 border-lime-400" id="footer">
+            <nav className="nav z-20 fixed bottom-0 p-3 h-16 w-full flex flex-row justify-between text-lime-200 bg-violet-950/35 border-t-2 border-lime-400" 
+            id="footer"
+            style={changeTheme == 'lightTheme' ? { background: '#83cd2950' } : { background: '#2e0d6850' }}
+            >
                 <h3 className="self-center">_agustin_m_marrero</h3>
             <div className="nav-content self-center">
                 <ul className="nav-items flex flex-row gap-3 items-center">
