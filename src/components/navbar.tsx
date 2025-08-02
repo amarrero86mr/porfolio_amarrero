@@ -1,6 +1,7 @@
 import "../App.css"
 import { useContext } from "react"
 import { DarkLightContext, type TDarkLightContext } from "./darklight.context"
+import { Link } from 'react-scroll';
 
 export const Navbar = () => {
 
@@ -28,12 +29,18 @@ export const Navbar = () => {
                 }}>{changeTheme == 'lightTheme'
                   ? <img className="" src="src/assets/icons/moon.svg" alt="icono de luna" width={'30px'}/>
                   : <img src="src/assets/icons/sun.svg" alt="icono de sol" width={'30px'} />}</button></li>
-            <li className={`nav-item p-1 ` + changeTheme}>HOME</li>
-            <li className={`nav-item p-1 ` + changeTheme}>ABOUT_ME</li>
-            <li className={`nav-item p-1 ` + changeTheme}>SKILLs</li>
-            <li className={`nav-item p-1 ` + changeTheme}>PROJECTs</li>
-            <li className={`nav-item p-1 ` + changeTheme}>CERTIFICATEs</li>
-            <li className={`nav-item p-1 ` + changeTheme} >CONTACT</li>
+            <li className={`nav-item p-1 ` + changeTheme}>
+              <Link to="hero" spy={true} smooth={true} duration={500}>HOME</Link> </li>
+            <li className={`nav-item p-1 ` + changeTheme}>
+              <Link to="about" spy={true} smooth={true} duration={500}>ABOUT_ME</Link> </li>
+            <li className={`nav-item p-1 ` + changeTheme}>
+              <Link to="skills" spy={true} smooth={true} duration={500}>SKILLs</Link> </li>
+            <li className={`nav-item p-1 ` + changeTheme}>
+              <Link to="proyects" spy={true} smooth={true} duration={500}>PROJECTs</Link> </li>
+            <li className={`nav-item p-1 ` + changeTheme}>
+              <Link to="certificates" spy={true} smooth={true} duration={500}>CERTIFICATEs</Link> </li>
+            {/* <li className={`nav-item p-1 ` + changeTheme}>
+              <Link to="contact" spy={true} smooth={true} duration={500}>CONTACT</Link> </li> */}
           </ul>
         </div>
       </nav>

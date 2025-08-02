@@ -7,7 +7,8 @@ export const Hero = () => {
     
     return (
         <>
-            <section className="m-auto w-11/12 p-20 items-center">
+            <section className="m-auto w-11/12 items-center">
+                <div className='h-16 my-2'></div>
                 <div className="flex gap-22 justify-center place-items-center">
                     <div className="m-4 place-items-center-safe">
                         <h1

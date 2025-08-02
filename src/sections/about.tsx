@@ -49,7 +49,8 @@ export const About = () => {
   }, [isPaused, changeTheme]);
 
   return (
-    <section className="mb-12">
+    <section className="my-15">
+      <div className='h-16 my-2'></div>
       <div
         className="mb-4 cursor-pointer select-none flex gap-3"
         onClick={() => setIsPaused((prev) => !prev)}
