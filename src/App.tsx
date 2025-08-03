@@ -15,20 +15,6 @@ function App() {
 
   const {changeTheme, changeBackground} = useContext<TDarkLightContext>(DarkLightContext)
 
-  // const [buttonDarkLigth, setButtonDarkLigth ] = useState<boolean>(true)
-  // const [themeStyle, setThemeStyle ] = useState<string>("themelight")
-  // const [theStyle, setTheStyle ] = useState<string>("thelight")
-  // const onDark = () => { 
-  //   const tstyle = !buttonDarkLigth
-  //   setButtonDarkLigth(tstyle)
-  //   if (tstyle) {
-  //     setThemeStyle('themelight')
-  //     setTheStyle('thelight')
-  //   } else {
-  //     setThemeStyle('themedark')
-  //     setTheStyle('thedark')
-  //   }
-  // }
   const options = {
   duration: 500,
   smooth: true,
