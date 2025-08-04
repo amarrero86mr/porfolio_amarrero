@@ -61,10 +61,22 @@
   visibility: hidden;
 }
 
-.skillSelect {
+
+
+.darkTheme>div>.skillSelect{
   background-color: 
-  #d7f999ab;
+  #a784ffaa;
   box-shadow:
-  0 0 7px 4px #e3f7bfb3;
+  0 0 7px 12px #A684FFAA;
+  border-radius: 20%;
 }
 
+.lightTheme>div>.skillSelect{
+  background-color: 
+  #bbf451AA;
+  box-shadow:
+  0 0 7px 12px #bbf451AA;
+  border-radius: 20%;
+}
+/* lightTheme */
+/* darkTheme */
