@@ -24,10 +24,6 @@ main {
   font-size: 1.2rem;
 }
 
-/* html {
-  z-index: -10;
-} */
-
 .background .darkBackground {
   background-color: #2F0D68;
   z-index: -10;
