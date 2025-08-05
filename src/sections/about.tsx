@@ -14,33 +14,15 @@ export const About = () => {
   const [isPaused, setIsPaused] = useState(false);
   const intervalRef = useRef<number | null>(null);
 
-  const [urlPlay, setUrlPlay ] = useState<string>('')
-
-
-
-  // Avanzar índice
   const next = () => {
     setActiveIndex((prev) => (prev + 1) % paragraphs.length);
   };
 
-  // Manejar ciclo automático
   useEffect(() => {
     if (!isPaused) {
       intervalRef.current = window.setInterval(() => {
         next();
       }, 10000);
-
-      if (changeTheme === 'lightTheme') {
-        setUrlPlay('src/assets/icons/pause_dark.svg')
-      } else {
-        setUrlPlay('src/assets/icons/pause_light.svg')
-      }
-    } else {
-      if (changeTheme === 'lightTheme') {
-        setUrlPlay('src/assets/icons/play_dark.svg')
-      } else {
-        setUrlPlay('src/assets/icons/play_light.svg')
-      }
     }
 
     return () => {
