@@ -1,10 +1,13 @@
+import { Carousel } from "../components/carousel"
+
 export const Projects = () => {
 
     return (
         <>
             <div className='h-16 my-2'></div>
             <h2>Projects</h2>
-            <div className="flex justify-between content-center">
+            <Carousel></Carousel>
+            {/* <div className="flex justify-between content-center">
                 <button className="h-24 w-12 left-0.5 self-center border-2 opacity-50 rounded-2xl border-lime-400 bg-violet-900 text-lime-400 hover:bg-violet-800 hover:opacity-100
                 duration-300 ease-in-out"
                 > &lt; </button>
@@ -22,7 +25,7 @@ export const Projects = () => {
                 </div>
                 <button className="h-24 w-12 -right-0.5 self-center border-2 opacity-50 rounded-2xl border-lime-400 bg-violet-900 text-lime-400 hover:bg-violet-800 hover:opacity-100
                 duration-300 ease-in-out"> &gt; </button>
-            </div>
+            </div> */}
         </>
     )
 }
