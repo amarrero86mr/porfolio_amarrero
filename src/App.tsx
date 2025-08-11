@@ -1,37 +1,62 @@
-import { useState } from 'react'
+
 import './App.css'
 import { Navbar } from './components/navbar'
+import { Footer } from './components/footer'
+import { Hero } from './sections/hero'
+import { About } from './sections/about'
+import { Skills } from './sections/skills'
+import { Certificates } from './sections/certificates'
+import { Projects } from './sections/projects'
+import { useContext } from 'react'
+import { DarkLightContext, type TDarkLightContext } from './components/darklight.context'
+import { Element, animateScroll } from 'react-scroll';
 
 function App() {
-  const [count, setCount] = useState(0)
 
+  const {changeTheme, changeBackground} = useContext<TDarkLightContext>(DarkLightContext)
+
+  const options = {
+  duration: 500,
+  smooth: true,
+  
+};
+
+  animateScroll.scrollToTop(options)
+  
   return (
-    <>
-      <div className="font-sans text-gray-800 scroll-smooth">
-      <Navbar />
-      <main>
-        <section id="hero"><Hero /></section>
-        <section id="about"><About /></section>
-        <section id="certificates"><Skills /></section>
-        <section id="projects"><Projects /></section>
-        <section id="certificates"><Certificates /></section>
-        <section id="contact"><Contact /></section>
-      </main>
-      <Footer />
-    </div>
-      <h1>Proyec Portfolio</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Full Stack Develop
-        </p>
+    <div className={`backgound ` + changeBackground}>
+      <div className={`contain_main ` + changeBackground}></div>
+      <div className={`contain ` + changeTheme}>
+        {/* <Navbar handleTheme={onDark}/> */}
+        <Navbar />
+        <main>
+          <Element name="hero">
+            <section id="hero"><Hero /></section>
+          </Element>
+          <Element name="about">
+          <section id="about"><About /></section>
+          </Element>
+          <Element name="skills">
+          <section id="skills"><Skills /></section>
+          </Element>
+          <Element name="proyects">
+          <section id="projects"><Projects /></section>
+          </Element>
+          <Element name="certificates">
+          <section id="certificates"><Certificates /></section>
+          </Element>
+
+          {/*
+          <Element name="contact">
+           <section id="contact"><Contact /></section>
+          </Element>
+          */}
+        </main>
+        <Footer />
       </div>
-      <p>
-        _makeding think in internet
-      </p>
-    </>
+
+
+    </div>
   )
 }
 
