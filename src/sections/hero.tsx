@@ -22,7 +22,7 @@ export const Hero = () => {
                     </div>
                     <div >
                         <img 
-                        src="src\assets\imgs\avatar.jpg" 
+                        src="src\assets\imgs\avatar2.png" 
                         alt="imagen de avatar" 
                         width={'200px'} 
                         className={`avatar ${changeTheme}`}
