@@ -1,7 +1,7 @@
 import '../App.css'
 import { useContext } from "react"
 import { DarkLightContext } from "../components/darklight.context"
-
+import imagen_avatar from "../assets/imgs/avatar.jpg" 
 export const Hero = () => {
     const {changeTheme} = useContext(DarkLightContext)
     
@@ -22,7 +22,7 @@ export const Hero = () => {
                     </div>
                     <div >
                         <img 
-                        src="src\assets\imgs\avatar2.png" 
+                        src={imagen_avatar} 
                         alt="imagen de avatar" 
                         width={'200px'} 
                         className={`avatar ${changeTheme}`}
