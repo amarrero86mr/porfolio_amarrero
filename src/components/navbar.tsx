@@ -2,7 +2,8 @@ import "../App.css"
 import { useContext } from "react"
 import { DarkLightContext, type TDarkLightContext } from "./darklight.context"
 import { Link } from 'react-scroll';
-
+import imag_sun from "../assets/icons/sun.svg"
+import imag_moon from "../assets/icons/moon.svg"
 export const Navbar = () => {
 
   const { changeTheme, fnChangeTheme } = useContext<TDarkLightContext>(DarkLightContext)
@@ -27,8 +28,8 @@ export const Navbar = () => {
                 onClick={() => {
                   fnThem()
                 }}>{changeTheme == 'lightTheme'
-                  ? <img className="" src="src/assets/icons/moon.svg" alt="icono de luna" width={'30px'}/>
-                  : <img src="src/assets/icons/sun.svg" alt="icono de sol" width={'30px'} />}</button></li>
+                  ? <img className="" src={imag_moon} alt="icono de luna" width={'30px'}/>
+                  : <img src={imag_sun} alt="icono de sol" width={'30px'} />}</button></li>
             <li className={`nav-item p-1 ` + changeTheme}>
               <Link to="hero" spy={true} smooth={true} duration={500}>HOME</Link> </li>
             <li className={`nav-item p-1 ` + changeTheme}>
