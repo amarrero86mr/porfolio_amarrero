@@ -10,6 +10,7 @@ import { Projects } from './sections/projects'
 import { useContext } from 'react'
 import { DarkLightContext, type TDarkLightContext } from './components/darklight.context'
 import { Element, animateScroll } from 'react-scroll';
+import { Contact } from './sections/contact'
 
 function App() {
 
@@ -46,11 +47,11 @@ function App() {
           <section id="certificates"><Certificates /></section>
           </Element>
 
-          {/*
+          
           <Element name="contact">
            <section id="contact"><Contact /></section>
           </Element>
-          */}
+         
         </main>
         <Footer />
       </div>
