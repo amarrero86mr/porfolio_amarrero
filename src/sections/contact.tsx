@@ -5,7 +5,7 @@ import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 
 export const Contact = () => {
   const { changeTheme } = useContext<TDarkLightContext>(DarkLightContext)
-  const RECAPTCHA_SITE_KEY = "6LdSJqgrAAAAAO2t5CVjDZ-YeIr0-eEygaqhJQQl"
+  const RECAPTCHA_SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY
 
   return (
     <div className="mb-32">

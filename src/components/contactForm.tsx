@@ -4,10 +4,10 @@ import axios from 'axios';
 import emailjs from '@emailjs/browser';
 import { SkillContext, type TSkillContext } from './skills.contexty';
 
-const RECAPTCHA_SECRET_KEY = "6LdSJqgrAAAAAONsIO1sOIyPnYq_rPg2KIGrKfs1"; // ¡ADVERTENCIA! No hagas esto en producción.
-const EMAILJS_SERVICE_ID = 'Tservice_jcjhosd';
-const EMAILJS_TEMPLATE_ID = 'template_9b722ul';
-const EMAILJS_PUBLIC_KEY = 'YBL-MZWRGhdWsP-Uq';
+const RECAPTCHA_SECRET_KEY = import.meta.env.VITE_RECAPTCHA_SECRET_KEY; // ¡ADVERTENCIA! No hagas esto en producción.
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 const ContactForm: React.FC = () => {
   const { skillSelected } = useContext<TSkillContext>(SkillContext)
