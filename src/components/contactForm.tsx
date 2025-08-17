@@ -24,7 +24,7 @@ const ContactForm: React.FC = () => {
 
     try {
       // Generar el token de reCAPTCHA
-      const recaptchaToken = await executeRecaptcha('form_submission');
+      const recaptchaToken = await grecaptcha.enterprise.execute('6LdSJqgrAAAAAO2t5CVjDZ-YeIr0-eEygaqhJQQl', {action: 'LOGIN'});
 
       // Enviar el token y los datos a la API de Vercel
       const response = await axios.post('/api/contact', {
