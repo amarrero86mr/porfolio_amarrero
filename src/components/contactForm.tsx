@@ -11,10 +11,9 @@ export const ContactForm = () => {
   const { changeTheme } = useContext<TDarkLightContext>(DarkLightContext)
   const RECAPTCHA_SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY as string
 
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
-
+  const [/* name */, setName] = useState('')
+  const [/* email */, setEmail] = useState('')
+  const [/* message */, setMessage] = useState('')
 
   const isRobot = () => {
     if (captchat.current !== null) {
