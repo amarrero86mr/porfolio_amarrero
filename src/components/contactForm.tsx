@@ -76,14 +76,13 @@ export const ContactForm = () => {
         <label id='skills'> Skills selected:
           <input type="text" name='skills' id='skills' value={skillSelected.join(', ')} />
         </label>
-
+        <div>
         <ReCAPTCHA
           ref={captchat}
           sitekey={RECAPTCHA_SITE_KEY}
           onChange={isRobot}
-        >
-
-        </ReCAPTCHA>
+        />
+        </div>
 
         <button type="submit" value='Submit'>_enviar</button>
       </form>
