@@ -98,3 +98,13 @@ h2 {
   font-size: 1.5em;
   line-height: 1.1;
 }
+
+.darkTheme>form>:placeholder-shown {
+  color: #83CD29;
+
+}
+
+.lightTheme>form>:placeholder-shown {
+  color: #4D179A;
+
+}
