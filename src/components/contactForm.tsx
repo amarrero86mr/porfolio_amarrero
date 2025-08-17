@@ -1,84 +1,95 @@
-// src/components/ContactForm.tsx
-import React, { useState } from 'react';
-import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
-import axios from 'axios';
+import { useContext, useRef, useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
+import { SkillContext, type TSkillContext } from "./skills.contexty";
+import { DarkLightContext, type TDarkLightContext } from "./darklight.context";
+import emailjs from '@emailjs/browser';
 
-const ContactForm: React.FC = () => {
-  const { executeRecaptcha } = useGoogleReCaptcha();
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [status, setStatus] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
+export const ContactForm = () => {
+  const captchat = useRef(null);
+  const form = useRef(null);
+  const { skillSelected } = useContext<TSkillContext>(SkillContext)
+  const { changeTheme } = useContext<TDarkLightContext>(DarkLightContext)
+  const RECAPTCHA_SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY as string
 
-  const handleSubmit = async (event: React.FormEvent) => {
-    event.preventDefault();
-    setIsSubmitting(true);
-    setStatus('Enviando...');
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
 
-    if (!executeRecaptcha) {
-      setStatus('Error: reCAPTCHA no está cargado.');
-      setIsSubmitting(false);
-      return;
+
+  const isRobot = () => {
+    if (captchat.current !== null) {
+      console.log(captchat)
+      emailjs.init({ publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY as string });
     }
+  }
 
-    try {
-      // Generar el token de reCAPTCHA
-      const recaptchaToken = await grecaptcha.enterprise.execute('6LdSJqgrAAAAAO2t5CVjDZ-YeIr0-eEygaqhJQQl', {action: 'LOGIN'});
-
-      // Enviar el token y los datos a la API de Vercel
-      const response = await axios.post('/api/contact', {
-        recaptchaToken,
-        from_name: name,
-        from_email: email,
-        message,
-      });
-
-      if (response.data.success) {
-        setStatus('¡Mensaje enviado con éxito!');
-        setName('');
-        setEmail('');
-        setMessage('');
-      } else {
-        setStatus('Error: ' + response.data.message);
-      }
-    } catch (err) {
-      setStatus('Ocurrió un error. Intenta de nuevo más tarde.');
-      console.error(err);
-    } finally {
-      setIsSubmitting(false);
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (captchat.current !== null) {
+      emailjs.init({ publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY as string });
     }
+    emailjs
+      .sendForm(
+          import.meta.env.VITE_EMAILJS_SERVICE_ID as string,
+          import.meta.env.VITE_EMAILJS_TEMPLATE_ID as string,
+         form.current || '', {
+        publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY as string,
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
   };
 
+
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>Contáctame</h2>
-      <input
-        type="text"
-        placeholder="Tu Nombre"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        required
-      />
-      <input
-        type="email"
-        placeholder="Tu Correo Electrónico"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        required
-      />
-      <textarea
-        placeholder="Tu Mensaje"
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-        required
-      />
-      <button type="submit" disabled={isSubmitting}>
-        {isSubmitting ? 'Enviando...' : 'Enviar Mensaje'}
-      </button>
-      {status && <p>{status}</p>}
-    </form>
-  );
+    <div className={`my-8 ${changeTheme}`}>
+
+
+      <form ref={form} className="form" onSubmit={(e)=>sendEmail(e)}>
+
+        <input
+          type="text"
+          name="nombre"
+          id="name"
+          placeholder="_tu Nombre"
+          onChange={(e) => setName(e.currentTarget.value)} />
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="_tu Email"
+          onChange={(e) => setEmail(e.currentTarget.value)} />
+        <div>
+
+          <input
+            className="h-30"
+            type="textarea"
+            name="message"
+            id="message"
+            placeholder="_tu Mensage"
+            onChange={(e) => setMessage(e.currentTarget.value)} />
+        </div>
+        <label id='skills'> Skills selected:
+          <input type="text" name='skills' id='skills' value={skillSelected.join(', ')} />
+        </label>
+
+        <ReCAPTCHA
+          ref={captchat}
+          sitekey={RECAPTCHA_SITE_KEY}
+          onChange={isRobot}
+        >
+
+        </ReCAPTCHA>
+
+        <button type="submit" value='Submit'>_enviar</button>
+      </form>
+    </div>
+  )
 };
 
 export default ContactForm;
