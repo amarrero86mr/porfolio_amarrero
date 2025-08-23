@@ -33,15 +33,15 @@ export const Navbar = () => {
             <li className={`nav-item p-1 ` + changeTheme}>
               <Link to="hero" spy={true} smooth={true} duration={500}>HOME</Link> </li>
             <li className={`nav-item p-1 ` + changeTheme}>
-              <Link to="about" spy={true} smooth={true} duration={500}>ABOUT_ME</Link> </li>
+              <Link to="about" spy={true} smooth={true} duration={500}>ABOUT_Me</Link> </li>
             <li className={`nav-item p-1 ` + changeTheme}>
               <Link to="skills" spy={true} smooth={true} duration={500}>SKILLs</Link> </li>
             <li className={`nav-item p-1 ` + changeTheme}>
               <Link to="proyects" spy={true} smooth={true} duration={500}>PROJECTs</Link> </li>
             <li className={`nav-item p-1 ` + changeTheme}>
               <Link to="certificates" spy={true} smooth={true} duration={500}>CERTIFICATEs</Link> </li>
-            {/* <li className={`nav-item p-1 ` + changeTheme}>
-              <Link to="contact" spy={true} smooth={true} duration={500}>CONTACT</Link> </li> */}
+            <li className={`nav-item p-1 ` + changeTheme}>
+              <Link to="contact" spy={true} smooth={true} duration={500}>CONTACT</Link> </li>
           </ul>
         </div>
       </nav>
