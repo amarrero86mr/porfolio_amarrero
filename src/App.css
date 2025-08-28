@@ -80,5 +80,44 @@
   0 0 7px 12px #bbf451AA;
   border-radius: 20%;
 }
-/* lightTheme */
-/* darkTheme */
+
+.velo-certificate{
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  transition: all 0.5s;
+  z-index: 5;
+}
+
+.velo-certificate.darkTheme{
+  background-color: #2e0d6822;
+}
+
+.velo-certificate.lightTheme{
+  background-color:  #83cd2922;
+}
+.modal-certificate{
+  border-radius: 1.5rem;
+  border: solid 2px currentColor;
+  position:fixed;
+  left: auto;
+  margin: auto 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 3rem;
+  transition: all 0.5s;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+}
+.modal-certificate.darkTheme{
+  background-color: #2e0d68;
+}
+
+.modal-certificate.lightTheme{
+  background-color:  #D8F999;
+}
