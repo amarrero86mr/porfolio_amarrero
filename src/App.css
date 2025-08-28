@@ -61,7 +61,9 @@
   visibility: hidden;
 }
 
-
+.skillBox>div>svg{
+  cursor: pointer;
+}
 
 .darkTheme>div>.skillSelect{
   background-color: 

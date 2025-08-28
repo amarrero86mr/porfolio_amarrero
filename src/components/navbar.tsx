@@ -21,7 +21,9 @@ export const Navbar = () => {
         id="navbar"
         style={changeTheme == 'lightTheme' ? { background: '#83cd2950' } : { background: '#2e0d6850' }}
       >
-        <h3 className={`self-center nav-item ` + changeTheme}>_agustin_m_marrero</h3>
+        <a className='self-center nav-item' href="https://www.linkedin.com/in/agustin-m-marrero" target='blank'>
+          <h3 className={`self-center nav-item ` + changeTheme}>_agustin_m_marrero</h3>
+        </a>
         <div className="nav-content self-center">
           <ul className="nav-items flex flex-row gap-3 items-center">
             <li className={`flex nav-icon ` + changeTheme}>
@@ -45,8 +47,8 @@ export const Navbar = () => {
             <li className={`nav-item p-1 ` + changeTheme}>
               <Link to="contact" spy={true} smooth={true} duration={500}>CONTACT {skillSelected.length > 0
                 ? <span className="bg-rose-500 z-30 text-rose-50 rounded-full text-xs h-4 w-4 m-1 absolute right-8 top-7 text-center "
-              >{skillSelected.length}<span className="bg-rose-500 z-20 rounded-full h-4 w-4 m-1 fixed top-7 right-8 animate-ping">{skillSelected.length}</span></span>
-              : null} </Link> </li>
+                >{skillSelected.length}<span className="bg-rose-500 z-20 rounded-full h-4 w-4 m-1 fixed top-7 right-8 animate-ping">{skillSelected.length}</span></span>
+                : null} </Link> </li>
           </ul>
         </div>
       </nav>
