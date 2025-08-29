@@ -21,7 +21,7 @@ export const ModalCertificate = (
             >
                 <h3 className="text-3xl text-center mb-4">{props.data.title}</h3>
                 <p className="text-lg text-center mb-4">{props.data.description}</p>
-                <img src={props.data.image} alt={props.data.title} className="max-w-xl md:max-w-md rounded-lg shadow-sm border-2 place-self-center" />
+                <img src={props.data.image} alt={props.data.title} className="max-w-3/4 rounded-lg shadow-sm border-2 place-self-center" />
 
             </div>
         </>
