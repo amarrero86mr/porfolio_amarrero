@@ -6,7 +6,7 @@ export const Certificates = () => {
     return (
         <>
          <div className='h-16 my-2'></div>
-                    <h2>Certificates</h2>
+                    <h2>CERTIFICATEs</h2>
                     <Carousel data={certificateData}></Carousel>
         </>
     )
