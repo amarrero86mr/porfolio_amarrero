@@ -1,4 +1,4 @@
-import { Carousel } from "../components/carousel"
+import { CarouselCertificates } from "../components/carousel.certificates"
 import { certificateData } from "../info/certificate_info"
 
 export const Certificates = () => {
@@ -7,7 +7,7 @@ export const Certificates = () => {
         <>
          <div className='h-16 my-2'></div>
                     <h2>Certificates</h2>
-                    <Carousel data={certificateData}></Carousel>
+                    <CarouselCertificates data={certificateData}></CarouselCertificates>
         </>
     )
 }

@@ -22,6 +22,7 @@ export const Skills = () => {
             <div className='h-16 my-2'></div>
             <div>
                 <h2>SKILLs</h2>
+                <p>_selecciona las skills que buscas</p>
             </div>
             <div
                 className={`my-8 skillBox ${changeTheme}`}
