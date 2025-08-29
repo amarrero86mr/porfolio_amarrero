@@ -23,7 +23,7 @@ export const Carousel = ( props: {data: Array<TSlideProyect>} ) => {
         loop={true}
         autoplay={{
           delay: 5000,
-          disableOnInteraction: true,
+          disableOnInteraction: false,
         }}
         navigation={true}
         pagination={{ clickable: true }}
